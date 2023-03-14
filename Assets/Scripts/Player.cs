@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     bool jump; 
     [SerializeField] Animator anim; 
     float lastYPos; 
+    public float distanceTraveled; 
 
     private void Start()
     {
@@ -19,6 +20,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        //distanceTraveled = distanceTraveled + Time.deltaTime; 
+        distanceTraveled += Time.deltaTime; 
         CheckForInput();  
         CheckIfPlayerIsFalling(); 
     }
